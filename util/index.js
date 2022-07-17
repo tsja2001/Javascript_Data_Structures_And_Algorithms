@@ -50,6 +50,23 @@ const swap = (array, index1, index2) => {
     return array
 }
 
+// 图的遍历, 颜色设置
+const Colors = {
+    WHITE: 0,
+    GRAY: 1,
+    BLACK: 2,
+}
+
+// 初始化节点颜色为白色
+const initializeColor = vertices => {
+    const color = {}
+    vertices.forEach(item => {
+        color[item] = Colors.WHITE
+    })
+
+    return color
+}
+
 module.exports = {
     defaultEquals,
     defaultCompare,
@@ -57,5 +74,7 @@ module.exports = {
     Compare,
     defaultToString,
     BalanceFactor,
-    swap
+    swap,
+    Colors,
+    initializeColor
 }
