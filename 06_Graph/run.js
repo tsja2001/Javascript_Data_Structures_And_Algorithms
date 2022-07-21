@@ -1,4 +1,5 @@
 const { breadthFirstSearch, breadthFirstSearch_ShortestPath } = require('./breadthFirstSearch')
+const { depthFirstSearch } = require('./depthFirstSearch')
 const { Graph } = require('./Graph')
 
 const graph = new Graph(false)
@@ -18,11 +19,11 @@ graph.addEdge("B", "E")
 graph.addEdge("B", "F")
 graph.addEdge("E", "I")
 
-graph.toString()
+// graph.toString()
 
-console.log(breadthFirstSearch_ShortestPath(graph, 'A'))
+// console.log(breadthFirstSearch_ShortestPath(graph, 'A'))
 
-// breadthFirstSearch(graph, 'B', (vertice) => {
-//     console.log(vertice)
-// })
+depthFirstSearch(graph, (vertice) => {
+    console.log(vertice)
+})
 

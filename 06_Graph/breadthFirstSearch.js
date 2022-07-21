@@ -35,6 +35,8 @@ const breadthFirstSearch = (graph, startVertex, callback) => {
         }
     }
 }
+
+// 获取最短路路径
 const breadthFirstSearch_ShortestPath = (graph, startVertex) => {
     // 拿到所有节点
     const vertices = graph.getVertex()
